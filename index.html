@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranish's Favorite Girl</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #response {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pranish's Favorite Girl?</h1>
+        <input type="text" id="answerBox" placeholder="Enter your answer here">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answerBox').value.trim().toLowerCase();
+            const response = document.getElementById('response');
+
+            if (answer === 'siya') {
+                response.textContent = "Correct! Siya is Pranish's favorite girl ❤️";
+                response.style.color = 'green';
+            } else {
+                response.textContent = "Wrong answer. Try again!";
+                response.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
